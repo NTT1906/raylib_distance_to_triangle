@@ -7,8 +7,7 @@ Vector2 pointToLineSegment(Vector2 p, Vector2 v1, Vector2 v2) {
 	Vector2 v12 = Vector2Subtract(v2, v1);
 	Vector2 v1p = Vector2Subtract(p, v1);
 	float dot = Vector2DotProduct(v1p, v12);
-	//printf("Dots: %f\n", dot);
-	if ((dot / Vector2Length(v1p)) <= 0) return v1;
+//	printf("Dots: %f\n", dot);
 	if (dot <= 0) return v1;
 	float lenSqr12 = Vector2LengthSqr(v12);
 	if (dot >= lenSqr12) return v2;
